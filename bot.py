@@ -13,7 +13,10 @@ import requests
 import sys
 import traceback
 from datetime import datetime
-
+import telebot
+from googlesearch import search
+from bs4 import BeautifulSoup
+import requests
 from openai_helper import generate_ai_response, analyze_image, analyze_video
 from conversation_handler import get_conversation_history, add_to_conversation, clear_conversation
 from user_preferences import update_user_preferences
