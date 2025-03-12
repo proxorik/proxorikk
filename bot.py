@@ -229,6 +229,9 @@ def handle_video(message):
                 custom_prompt = f"Это видео, которое пользователь хочет исправить или улучшить. Проанализируй его содержание, выяви возможные проблемы и предложи конкретные решения. Контекст от пользователя: {caption}"
             else:
                 custom_prompt = f"Это видео от пользователя. Проанализируй его содержание и дай подробный ответ, учитывая контекст: {caption}"
+                def search_query(query):
+ 
+    search_results = search(query, num_results=3) 
         
         # Analyze the video using the enhanced multi-frame approach
         if video_path:
