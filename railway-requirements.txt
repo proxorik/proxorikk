@@ -2,3 +2,7 @@ openai
 pyTelegramBotAPI
 python-dotenv
 flask
+python-telegram-bot
+googlesearch-python
+requests
+beautifulsoup4
