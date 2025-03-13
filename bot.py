@@ -228,24 +228,7 @@ def handle_video(message):
             if "исправить" in caption.lower() or "улучшить" in caption.lower() or "проблема" in caption.lower():
                 custom_prompt = f"Это видео, которое пользователь хочет исправить или улучшить. Проанализируй его содержание, выяви возможные проблемы и предложи конкретные решения. Контекст от пользователя: {caption}"
             else:
-                custom_prompt = f"Это видео от пользователя. Проанализируй его содержание и дай подробный ответ, учитывая контекст: {caption}"
-                from googlesearch import search
-
-def search_query(query):
-    try:
-        search_results = search(query, num_results=1)  # Ограничиваем до 1 результата
-        return next(search_results, "Извините, я не знаю ответа.")
-    except Exception:
-        return "Извините, я не знаю ответа."
-
-def bot_response(user_input):
-    knowledge_base = {
-        "Как тебя зовут?": "Я бот!",
-        "Какой сегодня день?": "Сегодня отличный день!",
-    }
-
-    return knowledge_base.get(user_input, search_query(user_input))
-
+                custom_prompt = f"Это видео от пользователя. Проанализируй его и дай подробный ответ, учитывая контекст: {caption}"
         # Analyze the video using the enhanced multi-frame approach
         if video_path:
             # Full video analysis with multiple frames
