@@ -21,6 +21,15 @@ from openai_helper import generate_ai_response, analyze_image, analyze_video
 from conversation_handler import get_conversation_history, add_to_conversation, clear_conversation
 from user_preferences import update_user_preferences
 from keep_alive import keep_alive
+from g4f.client import Client
+
+client = Client()
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "user", "content": "Hello"}],
+    web_search=False
+)
+print(response.choices[0].message.content)
 
 # Load environment variables
 load_dotenv()
