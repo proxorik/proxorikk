@@ -6,3 +6,4 @@ python-telegram-bot
 googlesearch-python
 requests
 beautifulsoup4
+g4f
